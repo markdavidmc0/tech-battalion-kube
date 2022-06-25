@@ -1,0 +1,11 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: mysql-configmap
+data:
+  wp-config.cnf: |
+    [mysql]
+    max_connections = 100
+    read_buffer_size = 1048576
+
+
