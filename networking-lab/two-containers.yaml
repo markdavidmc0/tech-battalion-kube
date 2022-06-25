@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: two-c-pod
+  labels:
+    app: two-c-pod
+spec:
+  containers:
+    - name: first
+      command:
+        - sleep
+        - "3600"
+      image: busybox
+    - name: second
+      image: gcr.io/google-samples/hello-app:1.0
+      ports:
+         - containerPort: 8080
