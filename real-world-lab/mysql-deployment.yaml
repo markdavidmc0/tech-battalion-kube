@@ -33,7 +33,7 @@ spec:
           mountPath: /var/lib/mysql
         - name: ssh-key-volume
           mountPath: /etc/ssh-key
-        livenessProbe:
+        readinessProbe:
           tcpSocket:
             port: 3307
         ports:
